@@ -25,36 +25,41 @@ everything should work out of the box, including correctly finding local paths.
 ## Project structure
 
 ```
-│{{cookiecutter.project_name}}          <- Project's main folder. It is initialized as a Git
-│                       repository with a reasonable .gitignore file.
+│{{cookiecutter.project_name}}        <- Project's main folder. It is initialized as a Git
+│                        repository with a reasonable .gitignore file.
 │
-├── _research        <- WIP scripts, code, notes, comments,
-│   |                   to-dos and anything in an alpha state.
-│   └── tmp          <- Temporary data folder.
+├── _research         <- WIP scripts, code, notes, comments,
+│   |                    to-dos and anything in an alpha state.
+│   └── tmp           <- Temporary data folder.
 │
-├── data             <- **Immutable and add-only!**
-│   ├── sims         <- Data resulting directly from simulations.
-│   ├── exp_pro      <- Data from processing experiments.
-│   └── exp_raw      <- Raw experimental data.
+├── data              <- **Immutable and add-only!**
+│   ├── sims          <- Data resulting directly from simulations.
+│   ├── exp_pro       <- Data from processing experiments.
+│   └── exp_raw       <- Raw experimental data.
 │
-├── plots            <- Self-explanatory.
-├── notebooks        <- Jupyter, Weave or any other mixed media notebooks.
+├── plots             <- Self-explanatory.
+├── notebooks         <- Jupyter, Weave or any other mixed media notebooks.
 │
-├── papers           <- Scientific papers resulting from the project.
+├── papers            <- Scientific papers resulting from the project.
 │
-├── scripts          <- Various scripts, e.g. simulations, plotting, analysis,
-│   │                   The scripts use the `src` folder for their base code.
-│   └── intro.jl     <- Simple file that uses DrWatson and uses its greeting.
+├── scripts           <- Various scripts, e.g. simulations, plotting, analysis,
+│   │                    The scripts use the `src` folder for their base code.
+│   └── intro.jl      <- Simple file that uses DrWatson and uses its greeting.
 │
-├── src              <- Source code for use in this project. Contains functions,
-│                       structures and modules that are used throughout
-│                       the project and in multiple scripts.
+├── src               <- Source code for use in this project. Contains functions,
+│                        structures and modules that are used throughout
+│                        the project and in multiple scripts.
 │
-├── README.md        <- Top-level README for anyone using this project.
-├── .gitignore       <- by default ignores _research, data, plots, videos,
-│                       notebooks and latex-compilation related files.
+├── README.md         <- Top-level README for anyone using this project.
+├── .gitignore        <- by default ignores _research, data, plots, videos,
+│                        notebooks and latex-compilation related files.
 │
-├── Manifest.toml    <- Contains full list of exact package versions used currently.
-└── Project.toml     <- Main project file, allows activation and installation.
-                        Includes DrWatson by default.
+├── Manifest.toml     <- Contains full list of exact package versions used currently.
+├── Project.toml      <- Main project file, allows activation and installation.
+│                        Includes DrWatson by default.
+│
+├── Dockerfile        <- Packages all dependencies into a portable container
+├── devspace.yaml     <- Configures the containerized development environment
+└── devspace_start.sh <- Displays helpful information when you access the
+                         containerized development environment.             
 ```
